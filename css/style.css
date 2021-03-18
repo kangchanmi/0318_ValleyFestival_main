@@ -1,0 +1,386 @@
+@charset "UTF-8";
+
+/* Reset 시작 */
+* {
+    color: #333;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+a                     { text-decoration: none;}
+a:link               { color: #333;}
+a:visited           { color: #333;}
+a:active            { color: #333;}
+a:hover            { color: #333;}
+ul                    {list-style: none;}
+img                 {vertical-align: middle;}
+/* Reset 끝 */
+
+
+/* Guide Line 시작 */
+div#wrap         {border: 1px solid #000;}
+/*header#header    {border: 1px solid #000;}*/
+/*div#contentArea  {border: 1px solid #000;}*/
+/*div#slideshow    {border: 1px solid #000;}*/
+/*aside#aside      {border: 1px solid #000;}*/
+/*#aside>div       {border: 1px solid #000;}*/
+/*footer#footer    {border: 1px solid #000;}*/
+/*#footer>div      {border: 1px solid #000;}*/
+/* Guide Line 끝 */
+
+
+/* div#wrap 시작 */
+div#wrap {
+    width: 1000px;
+    margin: 20px;
+    display: flex;
+}
+/* div#wrap 끝 */
+
+
+
+/* header#header 시작 */
+header#header {
+    width: 170px;
+    padding-left: 20px;
+    margin-right: 28px;
+}
+
+    /* div#headerLogo 헤더 로고 시작 */
+div#headerLogo {
+    text-align: center;
+    padding: 20px 0;
+}
+    /* div#headerLogo 헤더 로고 끝 */
+
+
+    /* nav#gnb 시작 */
+#gnb>ul>li {
+    text-align: center;
+}
+#gnb #mainMenu>li {
+    position: relative;
+}
+#gnb>ul#mainMenu>li>a {
+    width: 160px;
+    font-weight: bold;
+    font-size: 17px;
+    padding: 10px;
+    border: 1px solid #000;
+    display: inline-block;
+}
+#gnb>ul#mainMenu>li:not(:first-child)>a,  #gnb>ul.subMenu>li:not(:first-child)>a{
+    border-top: none;
+}
+#gnb>ul#mainMenu>li>a:hover {
+    color: #d95f48;
+    background-color: #bcdfff;
+}
+
+    /*ul.subMenu*/
+
+ul.subMenu1 {
+    border: 1px solid #bcdfff;
+    position: absolute;
+    left: 160px;
+    top: 0;
+    z-index: 2;
+
+    display: none;
+}
+ul.subMenu1 a {
+    width: 160px;
+    padding: 10px;
+    font-weight: bold;
+    display: inline-block;
+    background-color: #bcdfff;
+}
+ul#mainMenu>li>ul a:hover {
+    background-color: #fff;
+}
+
+ul.subMenu2 {
+    border: 1px solid #bcdfff;
+    position: absolute;
+    left: 160px;
+    top: -25px;
+    z-index: 2;
+
+    display: none;
+}
+ul.subMenu2 a {
+    width: 160px;
+    padding: 10px;
+    font-weight: bold;
+    display: inline-block;
+    background-color: #bcdfff;
+}
+
+ul.subMenu3 {
+    border: 1px solid #bcdfff;
+    position: absolute;
+    left: 160px;
+    top: -25px;
+    z-index: 2;
+
+    display: none;
+}
+ul.subMenu3 a {
+    width: 160px;
+    padding: 10px;
+    font-weight: bold;
+    display: inline-block;
+    background-color: #bcdfff;
+}
+
+ul.subMenu4 {
+    border: 1px solid #bcdfff;
+    position: absolute;
+    left: 160px;
+    top: -25px;
+    z-index: 2;
+
+    display: none;
+}
+ul.subMenu4 a {
+    width: 160px;
+    padding: 10px;
+    font-weight: bold;
+    display: inline-block;
+    background-color: #bcdfff;
+}
+
+    /*ul.subMenu*/
+    /* nav#gnb 끝 */
+
+/* header#header 끝 */
+
+
+
+
+/* div#contentArea 시작 */
+div#contentArea {
+    width: 820px;
+}
+
+
+    /* div#slideshow 시작 */
+#contentArea>div#slideshow {
+    width: 800px;
+    height: 350px;
+    text-align: right;
+
+    overflow: hidden;
+}
+#contentArea>div#slideshow>#shuttleFrame {
+    width: 2500px;
+}
+#contentArea>#slideshow #shuttleFrame>a {
+    float: left;
+    position: relative;
+}
+#contentArea>#slideshow span.promotionTxt {
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px 30px;
+/*    border: 1px solid #000;*/
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+}
+    /* div#slideshow 끝 */
+
+
+    /* aside#aside 시작 */
+aside#aside button {
+    cursor: pointer;
+}
+#contentArea>aside#aside {
+    height: 200px;
+    padding-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    /* 플렉스박스(=자식요소)의 정렬.
+    flex-start, center, flex-end */
+}
+
+#contentArea>#aside>div {
+    padding: 8px;
+}
+
+
+        /* 싱글탭 공통 영역 시작 */
+#contentArea>#aside>div button.tabBtn {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border: 1px solid #aaa;
+    border-bottom: none;
+    background-color: #eee;
+
+    position: relative;
+    left: 30px;
+    top: 1px;
+}
+#contentArea>#aside>div div.tabContents {
+    height: 130px;
+    padding-top: 10px;
+    padding-left: 4px;
+    border: 1px solid #aaa;
+}
+        /* 싱글탭 공통영역 끝 */
+
+
+
+        /* div#bbs_Notice 시작 */
+#contentArea>#aside>div#bbs_Notice {
+    width: 300px;
+}
+#contentArea>#aside>div#bbs_Notice li {
+    line-height: 38px;
+}
+#contentArea>#aside>div#bbs_Notice span {
+    font-size: 14px;
+}
+#contentArea>#aside>div#bbs_Notice a:first-child>span {
+    width: 200px;
+    display: inline-block;
+}
+        /* div#bbs_Notice 끝 */
+
+
+        /* div#bbs_Gallery 시작 */
+#contentArea>#aside>div#bbs_Gallery {
+    width: 300px;
+}
+#contentArea>#aside>div#bbs_Gallery table {
+    margin-top: 10px;
+}
+#contentArea #aside>div#bbs_Gallery td {
+    text-align: center;
+    padding: 1px;
+}
+        /* div#bbs_Gallery 끝 */
+
+
+        /* div#shortcut 시작 */
+#contentArea>#aside>div#shortcut {
+    width: 200px;
+    text-align: center;
+    padding-top: 30px;
+}
+        /* div#shortcut 끝 */
+
+    /* aside#aside 끝 */
+
+
+    /* footer#footer 시작 */
+#contentArea>footer#footer {
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#contentArea>#footer>div#footerLogo {
+    width: 180px;
+    text-align: center;
+    padding-top: 34px;
+}
+#contentArea>#footer>div#componyInfo {
+    width: 420px;
+    padding: 10px 20px;
+}
+#contentArea>#footer>#componyInfo address {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+#contentArea>#footer>div#snsLink {
+    width: 200px;
+    text-align: center;
+    padding-top: 32px;
+}
+#contentArea>#footer>#snsLink select {
+    font-size: 24px;
+}
+    /* footer#footer 끝 */
+
+
+/* div#contentArea 끝 */
+
+
+
+/* 모달 레이어 */
+div#modalLayerBG {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.6);
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: none;
+}
+div#modalPopup {
+    width: 600px;
+    height: 300px;
+    padding: 15px;
+    padding-left: 20px;
+    border-radius: 6px;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+div#modalPopup p {
+    margin: 2px 0;
+    line-height: 25px;
+}
+div#modalPopup button#closeBtn {
+    margin-top: 25px;
+    margin-left: 495px;
+    padding: 9px 13px;
+
+    border-radius: 2px;
+    border: none;
+    background-color: #ddd;
+    font-size: 17px;
+}
+/* 모달 레이어 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* IE9이하 버전에서 동일한 결과를 만들어주는 소스 */
+header, nav, main, footer, section,
+article, address, aside {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
